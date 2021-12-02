@@ -42,7 +42,7 @@ const Login = () => {
             <InnerContainer>
                 <PageLogo resizeMode = "cover" source ={require('./../assets/AshleticsLogo.png')}/>
                 <PageTitle>Ashletics</PageTitle>
-                <SubTitle>Account Login</SubTitle>
+                <SubTitle>Your Ultimate Workout Guide</SubTitle>
 
                 <Formik
                     initialValues={{email: '', password: ''}}
@@ -82,13 +82,13 @@ const Login = () => {
                             </StyledButton>
                             <Line />
                             <StyledButton google={true} onPress = {handleSubmit}>
-                                    <Fontisto name = "google" color = {primary} size = {25}/>
+                                <Fontisto name = "google" color = {primary} size = {25}/>
                                 <ButtonText google={true}>Sign in with Google</ButtonText>                                
                             </StyledButton>
                             <ExtraView>
                                 <ExtraText>Don't have an account already?</ExtraText>
                                 <TextLink>
-                                    <TextLinkContent>Signup</TextLinkContent>
+                                    <TextLinkContent> Signup</TextLinkContent>
                                 </TextLink>
                             </ExtraView>
                         </StyledFormArea>

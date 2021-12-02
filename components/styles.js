@@ -29,9 +29,43 @@ export const InnerContainer = styled.View`
     align-items: center;
 `;
 
+export const WelcomeContainer = styled(InnerContainer) `
+    padding: 25px;
+    padding-top: 10px;
+    justify-content: center;
+`
+
 export const PageLogo = styled.Image`
     width: 250px;
-    height:200px;
+    height:250px;
+`;
+
+export const PageLogoWelcome = styled.Image`
+    margin-top: 50px;
+    width: 250px;
+    height:250px;
+`;
+
+export const Avatar = styled.Image `
+    width:100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50px;
+    border-width: 2px;
+    border-color: ${secondary};
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+`
+
+export const WelcomeImage = styled.Image   `
+    height: 50%;
+    min-width: 100%;
+`
+
+export const SignupLogo = styled.Image`
+    width: 100px;
+    height:100px;
 `;
 
 export const PageTitle = styled.Text`
@@ -40,18 +74,29 @@ export const PageTitle = styled.Text`
     font-weight: bold;
     color: ${brand};
     padding: 10px;
+
+    ${(props)=> props.welcome && `
+        font-size: 35px;
+    `}
 `;
 
 export const SubTitle = styled.Text`
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 20px;
     letter-spacing: 1px;
     font-weight: bold;
     color: ${tertiary};
+
+    ${(props)=> props.welcome && `
+        margin-bottom: 5px;
+        font-weight: normal;
+    `}
+
 `;
 
 export const StyledFormArea = styled.View`
     width: 90%;
+    
 `
 
 export const StyleTextInput = styled.TextInput`
@@ -61,7 +106,7 @@ export const StyleTextInput = styled.TextInput`
     padding-right: 55px;
     border-radius: 5px;
     font-size: 16px;
-    height: 60px; 
+    height: 50px; 
     margin-vertical: 3px;
     margin-bottom: 10px;
     color: ${tertiary};
@@ -75,7 +120,7 @@ export const StyledInputLabel = styled.Text`
 
 export const LeftIcon = styled.View`
     left: 15px;
-    top: 38px;
+    top: 30px;
     position: absolute;
     z-index: 1;
 
@@ -83,13 +128,12 @@ export const LeftIcon = styled.View`
 
 export const RightIcon = styled.TouchableOpacity`
     right: 15px;
-    top: 35px;
+    top: 30px;
     position: absolute;
     z-index: 1;
 `;
 
 export const StyledButton = styled.TouchableOpacity`
-    padding: 15px;
     background-color: ${brand};
     justify-content: center;
     align-items: center;
@@ -115,7 +159,7 @@ export const ButtonText = styled.Text`
 
 export const ErrorBox = styled.Text`
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
 `
 
 export const Line = styled.View`
